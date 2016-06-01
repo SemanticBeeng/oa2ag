@@ -1,0 +1,18 @@
+Options +Indexes
+IndexOptions +SuppressSize +SuppressLastModified
+IndexStyleSheet http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/style.css
+IndexIgnore *.css README.* resources
+
+AddIcon http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/folder.png ^^DIRECTORY^^
+AddIconByEncoding http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/zip.png x-compress
+AddIcon http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/zip.png .zip
+AddIcon http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/pdf.png .pdf
+AddIcon http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/file.png .scala .java .sbt
+DefaultIcon http://www.informatik.uni-marburg.de/~rendel/oa2ag/resources/file.png
+
+AddDescription "Source files used for evaluation as shown in table 3" evaluation
+AddDescription "The source files of our experiments" src
+AddDescription "sbt configuration folder. Also contains input to the code generator" project
+AddDescription "Implementation of the <code>mix</code> macro" macro
+AddDescription "The author's version of the paper. The official paper can be obtained via ACM" rendel14object.pdf
+AddDescription "All sources bundled for <strong>download</strong>" rendel14object.zip

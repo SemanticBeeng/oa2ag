@@ -1,0 +1,507 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:200,400,300,700&subset=latin,latin-ext);
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html, body, body div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none; }
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0.618em 0;
+  padding: 0; }
+
+/* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
+body {
+  font: 11pt "Roboto Slab", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+  *font-size: small; }
+
+/* Hack retained to preserve specificity */
+/* Normalize monospace sizing: en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+  white-space: pre-wrap; }
+
+/* 1) Always force a scrollbar in non-IE 
+   2) Remove iOS text size adjust without disabling user zoom: www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99; }
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+  outline: none; }
+
+ul, ol {
+  margin-left: 2em;
+  margin-bottom: 0.618em; }
+
+ol {
+  list-style-type: decimal; }
+
+dl {
+  margin-bottom: 0.618em; }
+
+/* Remove margins for navigation lists */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none; }
+
+small {
+  font-size: 85%; }
+
+b, strong, th {
+  font-weight: bold; }
+
+td {
+  vertical-align: top; }
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px; }
+
+.oldie legend {
+  *margin-left: -7px; }
+
+/* 1) Make inputs and buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/
+   2) WebKit browsers add a 2px margin outside the chrome of form elements. 
+      Firefox adds a 1px margin above and below textareas 
+   3) Set font-size to match <body>'s, and font-family to sans-serif 
+   4) Align to baseline */
+button, input, select, textarea {
+  width: auto;
+  overflow: visible;
+  margin: 0;
+  font-size: 100%;
+  font-family: sans-serif;
+  vertical-align: baseline; }
+
+/* 1) Remove default scrollbar in IE: www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/
+   2) Align to text-top */
+textarea {
+  overflow: auto;
+  vertical-align: text-top; }
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer; }
+
+/* Remove extra padding and inner border in Firefox */
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* Colors for form validity */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  -moz-box-shadow: 0px 0px 5px red;
+  -webkit-box-shadow: 0px 0px 5px red;
+  box-shadow: 0px 0px 5px red; }
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd; }
+
+/* Bicubic resizing in IE7 for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.oldie img {
+  -ms-interpolation-mode: bicubic; }
+
+/* http://imakewebthings.com/deck.js/#sample */
+/* Kudos to http://www.colorzilla.com/gradient-editor/ */
+/* inspired by http://docs.sencha.com/ext-js/4-0/ */
+html {
+  height: 100%; }
+
+body {
+  background-color: #323438;
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+  line-height: 1.6em; }
+
+a, a:visited {
+  color: #261a3b; }
+
+p {
+  margin: 15px 0 10px 0; }
+
+pre, tt, code {
+  line-height: 1.4em;
+  font-family: Menlo, Monaco, Consolas, "Lucida Console", monospace;
+  margin: 0;
+  padding: 0; }
+
+header nav {
+  -moz-box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2) inset;
+  -webkit-box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2) inset;
+  -o-box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 -5px 5px rgba(0, 0, 0, 0.2) inset;
+  background: #333; }
+  header nav li {
+    display: inline-block; }
+    header nav li a, header nav li a:visited {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      display: inline-block;
+      color: #d5d5d5;
+      font-family: Lato, sans-serif;
+      font-weight: 300;
+      text-decoration: none;
+      padding: 1em 0.5em;
+      text-shadow: 1px 1px #000; }
+    header nav li a:hover {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      color: #fff; }
+
+div#page {
+  margin: 1em auto;
+  max-width: 1000px; }
+
+table#indexlist {
+  color: #777;
+  cursor: default;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%; }
+  table#indexlist tbody {
+    padding: 0 1.75em 1em; }
+  table#indexlist, table#indexlist tbody, table#indexlist td, table#indexlist tr {
+    display: block; }
+  table#indexlist tr {
+    -webkit-transition: background 0.2s ease-in-out;
+    -moz-transition: background 0.2s ease-in-out;
+    -o-transition: background 0.2s ease-in-out;
+    -ms-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0); }
+    table#indexlist tr:hover {
+      background: rgba(255, 255, 255, 0.05); }
+  table#indexlist td.indexcolname {
+    width: 250px; }
+  table#indexlist .indexbreakrow, table#indexlist .indexhead, table#indexlist .indexcollastmod, table#indexlist .indexcolsize {
+    display: none; }
+  table#indexlist td {
+    padding: 0.25em 0; }
+  table#indexlist td a, table#indexlist th a {
+    color: #aaa;
+    text-decoration: none; }
+    table#indexlist td a:hover, table#indexlist th a:hover {
+      text-decoration: underline; }
+  table#indexlist tr img {
+    padding-right: 0.75em; }
+  table#indexlist img[alt='[PARENTDIR]'] {
+    display: none; }
+
+h1#indextitle {
+  font-family: Lato, sans-serif;
+  font-weight: 300;
+  margin: 1.5em auto 0.75em auto;
+  font-size: 24pt;
+  color: #efefef;
+  padding-left: 0.75em;
+  max-width: 1000px; }
+
+address {
+  display: none; }
+
+div.docs, body.markdown #page article {
+  padding: 1px 1.75em 1.5em;
+  background: #ffffff; }
+  div.docs hr, body.markdown #page article hr {
+    border: 0 none;
+    border-top: 1px solid #dedede;
+    height: 1px;
+    margin: 20px 0; }
+  div.docs pre, body.markdown #page article pre {
+    margin: 1.5em 1em 1.5em; }
+  div.docs code, body.markdown #page article code {
+    border: 1px solid #dedede;
+    background: whitesmoke;
+    padding: 0 0.25em;
+    margin: 0 0.25em; }
+  div.docs pre > code, body.markdown #page article pre > code {
+    display: block;
+    background: none;
+    border: none;
+    margin: 0; }
+  div.docs blockquote, body.markdown #page article blockquote {
+    padding-left: 1em;
+    padding-right: 1em;
+    font-style: italic; }
+  div.docs strong, body.markdown #page article strong {
+    font-weight: bold; }
+  div.docs table, body.markdown #page article table {
+    margin: 1.5em 1em 1.5em; }
+    div.docs table thead, body.markdown #page article table thead {
+      border-top: 2px solid #dedede; }
+    div.docs table tbody, body.markdown #page article table tbody {
+      border-top: 1px solid #dedede;
+      border-bottom: 2px solid #dedede; }
+    div.docs table th, body.markdown #page article table th {
+      font-weight: bolder; }
+    div.docs table td, div.docs table th, body.markdown #page article table td, body.markdown #page article table th {
+      padding: 0.25em 0.5em; }
+  div.docs ul, body.markdown #page article ul {
+    list-style-type: none; }
+    div.docs ul li:before, body.markdown #page article ul li:before {
+      content: "-";
+      margin-left: -1em;
+      padding-right: 0.5em;
+      font-weight: bolder; }
+  div.docs dl, body.markdown #page article dl {
+    margin: 1.5em 1em 1.5em;
+    display: table; }
+    div.docs dl dt, body.markdown #page article dl dt {
+      float: left;
+      padding-right: 1em;
+      font-weight: bolder; }
+    div.docs dl dd, body.markdown #page article dl dd {
+      margin-left: 2em;
+      margin-bottom: 1em; }
+  div.docs h1, div.docs h2, div.docs h3, body.markdown #page article h1, body.markdown #page article h2, body.markdown #page article h3 {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    margin: 1.75em 0 0.75em 0; }
+  div.docs h1, body.markdown #page article h1 {
+    font-size: 24pt; }
+  div.docs h2, body.markdown #page article h2 {
+    border-top: 1px solid #dedede;
+    padding-top: 0.75em;
+    font-size: 20pt; }
+  div.docs h3, body.markdown #page article h3 {
+    font-size: 16pt; }
+
+#paper {
+  max-width: 600px;
+  padding: 0.5em 1em;
+  background: whitesmoke;
+  border: 1px solid #dedede; }
+
+@media only screen and (min-width: 950px) {
+  #paper {
+    margin-left: 3em; } }
+div.code {
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  padding: 0.5em 1em;
+  cursor: default; }
+  div.code a {
+    text-decoration: none;
+    border-bottom: 1px dotted #aaa; }
+  div.code .hide {
+    display: none; }
+  div.code .comment {
+    white-space: normal;
+    border-left: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Roboto Slab", "Palatino Linotype", "Book Antiqua", Palatino, FreeSerif, serif;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 1em;
+    margin: 0 0 1em;
+    font-size: 0.9em;
+    color: #888;
+    margin-bottom: 1px; }
+    div.code .comment hr {
+      border: 0 none;
+      border-top: 1px solid #dedede;
+      height: 1px;
+      margin: 20px 0; }
+    div.code .comment pre {
+      margin: 1.5em 1em 1.5em; }
+    div.code .comment code {
+      border: 1px solid #dedede;
+      background: whitesmoke;
+      padding: 0 0.25em;
+      margin: 0 0.25em; }
+    div.code .comment pre > code {
+      display: block;
+      background: none;
+      border: none;
+      margin: 0; }
+    div.code .comment blockquote {
+      padding-left: 1em;
+      padding-right: 1em;
+      font-style: italic; }
+    div.code .comment strong {
+      font-weight: bold; }
+    div.code .comment table {
+      margin: 1.5em 1em 1.5em; }
+      div.code .comment table thead {
+        border-top: 2px solid #dedede; }
+      div.code .comment table tbody {
+        border-top: 1px solid #dedede;
+        border-bottom: 2px solid #dedede; }
+      div.code .comment table th {
+        font-weight: bolder; }
+      div.code .comment table td, div.code .comment table th {
+        padding: 0.25em 0.5em; }
+    div.code .comment ul {
+      list-style-type: none; }
+      div.code .comment ul li:before {
+        content: "-";
+        margin-left: -1em;
+        padding-right: 0.5em;
+        font-weight: bolder; }
+    div.code .comment dl {
+      margin: 1.5em 1em 1.5em;
+      display: table; }
+      div.code .comment dl dt {
+        float: left;
+        padding-right: 1em;
+        font-weight: bolder; }
+      div.code .comment dl dd {
+        margin-left: 2em;
+        margin-bottom: 1em; }
+  div.code :target, div.code .highlighted {
+    display: inline-block;
+    background: #ffaaaa;
+    color: #5F2222;
+    box-shadow: 0 0 0px 5px #ffaaaa;
+    border-radius: 1px; }
+
+div.docs {
+  background: #fefefe; }
+  div.docs pre {
+    display: block;
+    background: whitesmoke;
+    border: 1px solid #dedede;
+    padding: 0.5em 1em;
+    box-shadow: #fff 0px 0px 0px 1px inset; }
+
+#documentation {
+  margin: 1em 1% 3em;
+  background: whitesmoke;
+  box-shadow: 0px 1px 12px 4px rgba(0, 0, 0, 0.6);
+  border: 1px solid #7A7A7A;
+  border-radius: 3px; }
+
+body > aside input[type="search"] {
+  opacity: 0.4;
+  font-size: 1.5em;
+  padding: 0.5em; }
+body > aside input[type="search"]:focus {
+  opacity: 1; }
+body > aside .index {
+  color: #cccccc;
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  body > aside .index li {
+    border-top: 1px solid #555;
+    padding: 1em 0.5em;
+    margin: 0; }
+    body > aside .index li > h4 {
+      font-size: 2em;
+      font-family: Lato, sans-serif;
+      font-weight: 300;
+      margin: 0;
+      margin-bottom: 0.5em;
+      color: #efefef; }
+    body > aside .index li .signature {
+      white-space: nowrap; }
+      body > aside .index li .signature h4 {
+        font-weight: 100; }
+      body > aside .index li .signature .name {
+        font-weight: bold; }
+      body > aside .index li .signature a {
+        color: #efefef;
+        text-decoration: none; }
+    body > aside .index li .path {
+      font-style: italic;
+      color: #999999; }
+  body > aside .index li:hover {
+    background: rgba(255, 255, 255, 0.1); }
+  body > aside .index .matchresult {
+    color: #D1FF7D;
+    font-weight: bold; }
